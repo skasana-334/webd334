@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: aqua;
+    }
+  div{
+      border: 2px solid red;
+      width :150px;
+
+      height:150px;
+      margin: 50px auto;
+      background-color: orange;
+                          /* ANIMATION */
+      /* animation-name: sk;
+      animation-duration: 5s;/*time require to change
+      animation-delay: 3s;/*when animation will start
+      animation-iteration-count: infinite;
+      animation-timing-function:easy;/*how our aniamation proceed in ease-slow at start and end fast at middle
+      ease in -slow at start
+      steps-complete in steps
+      animation-direction: alternate;/*from 0 to 50 then 50to 0
+      animation-direction: alternate-reverse;start from reverse then behave alternatively */
+      animation: sk 5s ease 1s infinite alternate;
+      animation-fill-mode: backwards;/* attains the first keyframe i.e start fromm 0 already
+      forward attains last keyframe i.e after reach last animation it will not go to first*/
+       
+
+                  /* TRANSITION */
+/* 
+                  CSS TRANSITIONS	                                                     
+Can only move from initial to final state — no intermediate steps
+Can only run once
+Require a trigger to run (like mouse hover)
+Best for creating a simple change from one state to another
+                    CSS ANIMATIONS
+Can move from initial to final state, with intermediate steps in between
+Can loop infinitely thanks to animation-iteration-count property
+Can be triggered but can also run automatically */
+
+  }
+ 
+  div:hover{
+      animation-play-state: paused;
+     /*when we move cursor it would stop*/
+  }
+   /*to access animation*/
+  @keyframes sk{
+   /* in two ways 
+   1)  */
+   from{
+       border-radius: 0%;
+       border: 10%;
+   }
+   to{
+       border-radius: 50%;
+       background-color: red;
+   }
+ /*2)* it is convinient as u can do at 30 % 40 %..*/
+ 0%{
+    border-radius: 0%;
+
+ }
+ 20%{
+    border-radius: 50%;
+       width: 200px;
+ }
+ 30%{
+    border-radius: 70%;
+     width: 300px;
+ }}
+ .box{
+     display: flex;
+    border: 2px solid red;
+      width :350px;
+
+      height:250px;
+      margin: 100px auto;
+      background-color: orange;
+         /* transition-property: background-color;
+        transition-duration: 1s;
+        transition-timing-function: ease-in-out;
+        transition-delay: 2s; */
+
+        /* Transition short hand property in one line */
+        /* transition: background-color 1s ease-in-out 2s; */
+
+        
+        transition: all 1s ease-in-out .3s;
+ }
+  .box:hover{
+        background-color: green;
+        height: 400px;
+        width: 400px;
+        border-radius: 100px;
+        font-size: 45px;
+    
+  }
+</style>
+<body>
+ <div></div>
+    <span class="box">
+ apna kaam bnta bhad me jaye janta  
+    </span>
+</body>
+</html>
