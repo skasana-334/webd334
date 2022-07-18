@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/BsDoLVMnmZs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"  allowfullscreen></iframe> -->
+        <!-- this is video embedding -->
+       <!-- to embbed the local video u have to select it from current folder ie in which u're working -->
+        <video src="videoplayback.mp4" controls width="555"></video>
+    </div>
+                     <!-- making forms -->
+<div>
+    <form action="backend.php">
+        <div>
+            <!-- label is for better ui due tto which we can enter details by clicking on text also -->
+            <label for="name">
+            NAME: <br><input type="text" name="myname" id="name" placeholder="enter the name" > 
+        </label> <!--name is for to identify by backend and label for and input id should be same and id should be unique for every element-->
+        </div>
+       <br>
+       <div>
+           rollno: <input type="number" name="myroll" >
+       </div>
+       <br>
+         <div>
+             <label for="boy">
+            gender: male <input type="radio" name="mygender" id="boy"></label>
+                 <label for="girl"  >
+            female <input type="radio" name="mygender" id="girl" ></label>
+                    <!-- if we are giving same name then we will be able to select one at a time only otherwise wecan select as multiple options-->
+         </div>
+         <br>
+        <!-- to get multiple use tag*n i.e hr*5 -->
+         description: <br><textarea name="my description"  cols="30" rows="10" placeholder="write about urself"></textarea>
+    </form>
+</div>
+
+</body>
+</html>
