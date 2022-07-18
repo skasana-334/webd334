@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     body{
+        margin: 0;
+            padding: 0;
+            background-color: black;
+            color: orange;
+            background: url(https://www.vibesofindia.com/wp-content/uploads/2021/12/849795-sunny-leonepic-dabboo-ratnani.jpg) ;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+    }
+    section::before{
+content:"";/*we have to write it to apply befor after*/
+        position: absolute;/* so that posn can change acc to parent which is sectoin*/
+        border-top: 2px solid red;
+        width: 90%;
+        top: 20%;
+        /* left: 50%; */
+    }
+    section::after{
+content: "";/*we have to write it to apply befor after*/
+        position: absolute;/* so that posn can change acc to parent which is sectoin*/
+        border-bottom: 2px solid red;
+        width: 90%;
+        top: 50%;
+    }
+    .navigation {
+            display: flex;
+        }
+
+        li {
+            list-style: none;
+            padding: 20px 23px;
+        }
+
+        section {
+            height: 344px;
+            margin: 3px 230px;
+            display: flex;
+            flex-direction: column;
+           align-items: center;
+           justify-content: center;
+        }
+</style>
+<body>
+    <header>
+    <nav class="navbar">
+        <ul class="navigation">
+            <li>HOME</li>
+            <li>CONTACT</li>
+            <li>SERVICE</li>
+        </ul>
+    </nav></header>
+    <section>
+        <h1>hum do hmare do</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam voluptatibus eveniet dolore, ducimus officiis ipsum corporis, ipsa quos consequatur laborum, numquam laudantium suscipit sit voluptates.</p>
+    </section>
+</body>
+</html>

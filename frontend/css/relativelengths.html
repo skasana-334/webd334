@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>different length</title>
+    <link rel="icon" href="favicon.ico">
+</head>
+<style>
+    html{
+        font-size: 20px;
+    }
+    .em li{
+        font-size: 1.5em;
+    }
+    .percnt li{
+        font-size: 70%;/* it helps to reduce font acc to parent's element*/
+    }
+    .rem li{
+        font-size: 1.5rem;
+    }
+
+    .vwsvhs{
+        background-color: antiquewhite;
+         width: 50vw;/* in this the size will be 10% of view width means with of screen*/
+         height: 25vh;
+    }
+</style>
+<body>
+    <!-- to recap, the em unit means "my parent element's font-size" in the case of typography. The <li> elements inside the <ul> with a class of ems take their sizing from their parent. So each successive level of nesting gets progressively larger, as each has its font size set to 1.5em — 1.5 times its parent's font size.(here for cllg and student html is paremnt and for name student is parent) -->
+  <ul class="em">
+      <li>college</li>
+      <li>student
+      <ul>
+          <li>name</li>
+          <li>branch</li>
+          <li>roll no</li>
+      </li>
+      </ul>
+  </ul>
+  <ul class="percnt">
+    <li>college</li>
+    <li>student
+    <ul>
+        <li>name</li>
+        <li>branch</li>
+        <li>roll no
+            <ul>
+                <li>hobbies</li>
+                <li>girlfriend</li>
+            </li>
+            </ul>
+        </li>
+    </li>
+    </ul>
+</ul>
+  <!-- To recap, the rem unit means "The root element's font-size". (rem stands for "root em".) The <li> elements inside the <ul> with a class of rems take their sizing from the root element (<html>). This means that each successive level of nesting does not keep getting larger. -->
+  <ul class="rem">
+    <li>college</li>
+    <li>student
+    <ul>
+        <li>name</li>
+        <li>branch</li>
+        <li>roll no</li>
+    </li>
+    </ul>
+</ul>
+<!-- no w we have vh and vw which is used when we have to show our web in multiple diff type of devices like phn tab etc -->
+<div class="vwsvhs">
+    i,m a pro player
+</div>
+</body>
+</html>

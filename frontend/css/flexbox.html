@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+</head>
+<style>
+    .container{
+        border: 3px solid orange;
+        background-color: aliceblue;
+        height: 550px;
+        width: 100%;
+        display: flex;
+        /* flexbox is a onedimensional layout method for arranging elements in row or colunms.items flex(expand) to fill the spaces and shrink to fit into smaller spaces*/
+        /*initialise the container aas flexbox*/
+                    /* properties of flexbox container*/
+        /* as soon as we do this then all items will be flex items and they will arrange in rom manner
+        i.eyour main axis will run along the row in the inline direction. by default flex direction is in row*/
+         /* flex-direction: row-reverse;same as row but items are arranging from last to first and in right side */
+        /* flex-direction: column;in block manner from top to bottom
+             flex-direction: column-reverse; */
+    flex-wrap: wrap;/*it is useful during responsiveness if we will see our content in small screens then our content will be wrap according to it*/
+    flex-wrap: wrap-reverse;/* wrap from last to first and items will shift to bottom*/
+    flex-flow: row wrap;
+                  /*alignment and justification*/
+   /* justify-content: center; justify the content in main axis and at he top if direction is colunm then it is vertically for row it is horizontal
+    justify-content: space-between; maintain same space b/w boxes but theyb flushed(no space) at the start and end
+    justify-content: space-evenly; distribute the equal dist
+    justify-content: space-around;Distribute items evenly Items have a half-size space on either end */
+                  /* alignment*/
+   /* align-content: center; center in cross axis if we use with justufy then it will be center from both axis
+   it is only for multi lines */
+   /* align-items: for single line; */
+
+    }
+    .item{
+        background-color: rgb(117, 117, 117);
+        border: 2px solid greenyellow;
+        margin: 3px;
+        padding: 3px;
+        height: 200px;
+        width: 200px;
+    }
+    #item-1{
+            /* Flex properties for a flex item */
+            /* Higher the order, later it shows up in the container */
+            /* order: 2; */
+
+            /* flex-grow: 2;*/
+            flex-shrink: 2; 
+
+        }
+        #item-2{
+            /* flex-grow: 3;
+            flex-shrink: 3 ; */
+            flex-basis: 160px;
+            /* when flex-direction is set to row flex-basis: will control width */
+            /* when flex-direction is set to column flex-basis: will control height */
+        }
+        #item-3{
+            /* flex: 2 2 230px; */
+            align-self: flex-start;
+            align-self: flex-end;
+            align-self: center;
+            /* it will help to center the indivisual item*/
+
+            }
+</style>
+<body>
+    <div class="container">
+        <!-- /*.item#item-$*n will produce n ids having same class in inc order*/ -->
+        <div class="item" id="item-1">1</div>
+        <div class="item" id="item-2">2</div>
+        <div class="item" id="item-3">3</div>
+    </div>
+</body>
+</html>
